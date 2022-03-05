@@ -1,5 +1,4 @@
-import { TimeIcon } from "@chakra-ui/icons";
-import { Box, Center, Flex, Heading, Image, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { FC } from "react";
 
 const Profil: FC<{}> = () => {
@@ -17,14 +16,6 @@ const Profil: FC<{}> = () => {
       <Flex direction={"column"} gap={1}>
         <Heading>{`Hi, I'm Kim !`}</Heading>
         <Text>{`I'm a Software Engineer`}</Text>
-      </Flex>
-      <Flex direction="column" alignItems="center" bg={useColorModeValue("yellow.300", "yellow.600")} p={5}>
-        <TimeIcon />
-        <Heading
-          colorScheme={"blackAlpha"}
-          size="md"
-          fontStyle={"initial"}
-        >{`Soon, you'll get more info about me...`}</Heading>
       </Flex>
     </Flex>
   );
