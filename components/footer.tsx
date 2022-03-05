@@ -10,7 +10,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FC, ReactNode } from "react";
 
 const SocialButton = ({
@@ -63,6 +63,12 @@ const Footer: FC<BoxProps> = () => {
             href={"https://twitter.com/KimAurore"}
           >
             <FaTwitter />
+          </SocialButton>
+          <SocialButton
+            label={"LinkedIn"}
+            href={"https://www.linkedin.com/in/kim-aurore-biloni-69887a143/"}
+          >
+            <FaLinkedin />
           </SocialButton>
           <SocialButton label={"GitHub"} href={"https://github.com/JolieKimy"}>
             <FaGithub />
