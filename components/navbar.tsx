@@ -1,23 +1,28 @@
 /**
  * Based on https://chakra-templates.dev/templates/navigation/navbar/withDarkModeSwitcher
  */
-import { ReactNode } from "react";
+import { FC } from "react";
 import {
   Box,
   Flex,
   Link,
   Button,
+  Image,
   Stack,
   useColorMode,
   useStyleConfig,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-const NavLink = ({ children }: { children: ReactNode }) => {
+type NavLinkProps = {
+  route?: string;
+}
+const NavLink: FC<NavLinkProps> = ({ route = '#', children }) => {
   const styles = useStyleConfig("NavLink");
 
   return (
-    <Link __css={styles} href={"#"}>
+    <Link href={route}
+      __css={styles}>
       {children}
     </Link>
   );
@@ -30,14 +35,26 @@ const Navbar = () => {
 
   return (
     <Box __css={styles}>
-      <Box>Logo</Box>
-        <Flex alignItems={"center"}>
-          <Stack direction={"row"} spacing={7}>
-            <Button onClick={toggleColorMode}>
-              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            </Button>
-          </Stack>
-        </Flex>
+      <Image
+        boxSize={"100px"}
+        src=""
+        alt="KB" />
+      <NavLink>
+        About
+      </NavLink>
+      <NavLink>
+        Projects
+      </NavLink>
+      <NavLink>
+        Contact
+      </NavLink>
+      <Flex alignItems={"center"}>
+        <Stack direction={"row"} spacing={7}>
+          <Button onClick={toggleColorMode}>
+            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          </Button>
+        </Stack>
+      </Flex>
     </Box>
   );
 };

@@ -1,7 +1,10 @@
 import { TimeIcon } from "@chakra-ui/icons";
-import { Flex, useColorModeValue, Heading } from "@chakra-ui/react";
+import { Flex, useColorModeValue, Heading, Text, Box, LinkBox, LinkOverlay } from "@chakra-ui/react";
 import type { NextPage } from "next";
+import Article from "../components/article";
 import Profil from "../components/profil";
+import Section from "../components/section";
+import Projects from "../content/projects";
 
 const Home: NextPage = () => {
   return (
@@ -18,8 +21,15 @@ const Home: NextPage = () => {
           colorScheme={"blackAlpha"}
           size="md"
           fontStyle={"initial"}
-        >{`Soon, you'll get more info about me...`}</Heading>
+        >{`Work in progess...`}</Heading>
       </Flex>
+      <Section title="About">
+        <Text>{`// TODO`}</Text>
+      </Section>
+      <Section title="Projects">
+        {Projects.map((a, i) => <Article key={i} {...a} />)}
+      </Section>
+      <Section title="Contact" />
     </Flex>
   );
 };

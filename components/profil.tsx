@@ -14,8 +14,8 @@ const Profil: FC<{}> = () => {
         />
       </Box>
       <Flex direction={"column"} gap={1}>
-        <Heading>{`Hi, I'm Kim !`}</Heading>
-        <Text>{`I'm a Software Engineer`}</Text>
+        <Heading>{`Kim Aurore Biloni`}</Heading>
+        <Text>{`Software Engineer & Project Leader`}</Text>
       </Flex>
     </Flex>
   );

@@ -7,7 +7,8 @@ const Navbar : ComponentStyleConfig = {
     justifyContent: "space-between",
     h: 16,
     px: 4,
-    bg: props.colorMode === "dark" ? "gray.900": "gray.100"
+    borderBottom: "solid 1px",
+    borderBottomColor: props.colorMode === "dark" ? "gray.900": "gray.100", 
   })
 }
 
