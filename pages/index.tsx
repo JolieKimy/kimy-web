@@ -7,6 +7,8 @@ import Profil from "../components/profil";
 import Section from "../components/section";
 import Projects from "../content/projects";
 import Abilities from "../content/abilities";
+import Experiences from "../content/experiences";
+import Experience from "../components/experience";
 
 const Home: NextPage = () => {
   return (
@@ -32,7 +34,7 @@ const Home: NextPage = () => {
         {Projects.map((a, i) => <Article key={i} {...a} />)}
       </Section>
       <Section title="Experiences">
-        <Text>{`// TODO`}</Text>
+        {Experiences.map((e, i) => <Experience key={i} {...e} />)}
       </Section>
       <Section title="Education">
         <Text>{`// TODO`}</Text>
